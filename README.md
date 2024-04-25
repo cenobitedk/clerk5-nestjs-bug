@@ -5,21 +5,21 @@ The repo demonstrates the following bug:
 ```sh
 error TypeError: Failed to parse URL from /protected
     at new Request (node:internal/deps/undici/undici:6110:19)
-    at new ClerkRequest (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:24:5)
+    at new ClerkRequest (/home/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:24:5)
     ... 6 lines matching cause stack trace ...
-    at canActivateFn (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@nestjs/core/router/router-execution-context.js:135:59)
-    at /Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@nestjs/core/router/router-execution-context.js:42:37 {
+    at canActivateFn (/home/clerk5-nestjs-bug/node_modules/@nestjs/core/router/router-execution-context.js:135:59)
+    at /home/clerk5-nestjs-bug/node_modules/@nestjs/core/router/router-execution-context.js:42:37 {
   [cause]: TypeError: Invalid URL
       at new URL (node:internal/url:796:36)
       at new Request (node:internal/deps/undici/undici:6108:25)
-      at new ClerkRequest (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:24:5)
-      at createClerkRequest (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:72:54)
-      at authenticateRequest (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/request.ts:66:57)
-      at Object.authenticateRequest2 [as authenticateRequest] (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/factory.ts:51:12)
-      at AuthService.authenticateRequest (/Users/jh/Sites/playground/clerk5-nestjs-bug/src/auth/auth.service.ts:26:32)
-      at AuthGuard.canActivate (/Users/jh/Sites/playground/clerk5-nestjs-bug/src/auth/auth.guard.ts:32:52)
-      at GuardsConsumer.tryActivate (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)
-      at canActivateFn (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@nestjs/core/router/router-execution-context.js:135:59) {
+      at new ClerkRequest (/home/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:24:5)
+      at createClerkRequest (/home/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:72:54)
+      at authenticateRequest (/home/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/request.ts:66:57)
+      at Object.authenticateRequest2 [as authenticateRequest] (/home/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/factory.ts:51:12)
+      at AuthService.authenticateRequest (/home/clerk5-nestjs-bug/src/auth/auth.service.ts:26:32)
+      at AuthGuard.canActivate (/home/clerk5-nestjs-bug/src/auth/auth.guard.ts:32:52)
+      at GuardsConsumer.tryActivate (/home/clerk5-nestjs-bug/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)
+      at canActivateFn (/home/clerk5-nestjs-bug/node_modules/@nestjs/core/router/router-execution-context.js:135:59) {
     code: 'ERR_INVALID_URL',
     input: '/protected'
   }
@@ -69,7 +69,7 @@ The app will throw the TypeError as shown in the intro
 ```sh
 error TypeError: Failed to parse URL from /protected
     at new Request (node:internal/deps/undici/undici:6110:19)
-    at new ClerkRequest (/Users/jh/Sites/playground/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:24:5)
+    at new ClerkRequest (/home/clerk5-nestjs-bug/node_modules/@clerk/backend/src/tokens/clerkRequest.ts:24:5)
     ... [truncated]
 ```
 
