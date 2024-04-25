@@ -31,6 +31,8 @@ export class AuthGuard implements CanActivate {
 
     const isAuthenticated = await this.authService.authenticateRequest(request);
 
+    this.logger.verbose(`${request.url} - isAuthenticated: ${isAuthenticated}`);
+
     return isAuthenticated ?? false;
   }
 }
