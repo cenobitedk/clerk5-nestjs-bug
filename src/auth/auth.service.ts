@@ -7,9 +7,9 @@ import { Injectable, Logger, UnauthorizedException } from '@nestjs/common';
 export class AuthService {
   private readonly logger = new Logger(AuthService.name);
 
-  public clerk: ClerkClient;
+  public clerkClient: ClerkClient;
   constructor() {
-    this.clerk = createClerkClient({
+    this.clerkClient = createClerkClient({
       secretKey: 'INSERT_CLERK_SECRET',
     });
   }
@@ -23,7 +23,7 @@ export class AuthService {
   async authenticateRequest(request: Request): Promise<boolean | undefined> {
     try {
       const isValidAccessWithSession = (
-        await this.clerk.authenticateRequest(request)
+        await this.clerkClient.authenticateRequest(request)
       ).isSignedIn;
 
       this.logger.verbose(
